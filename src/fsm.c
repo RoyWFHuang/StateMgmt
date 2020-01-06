@@ -101,20 +101,7 @@ void *state_machine(void *argc)
         {
             state_table[_g_state_int](
                     msg_struct.event_int);
-            /*
-            if(0 != state_table[msg_struct.event_int][corrent_state_int])
-            {
-                corrent_state_int =
-                state_table[msg_struct.event_int][corrent_state_int](
-                    msg_struct.event_int);
-            }
-            else
-            {
-                STM_DEBUG_PRINT("state[%d], error event[%d] \n",
-                    corrent_state_int,
-                    msg_struct.event_int);
-            }
-            */
+
             if(eSTM_E_DEINIT == msg_struct.event_int)
                 break;
         }
@@ -544,7 +531,7 @@ static int deinit_state(eStmEvent event_int)
             break;
     }
 }
-/*
+/*  
 static int error_state(eStmEvent event_int)
 {
     return eSTM_S_ITN_ERROR;

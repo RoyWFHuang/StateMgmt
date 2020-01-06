@@ -64,6 +64,8 @@ int main()
     {
         int event_int;
         scanf("%d", &event_int);
+        if (eSTM_E_END <= event_int)
+            break;
         stmeve_struct.event_int = event_int;
         int ret_int = msgsnd(qid_int,
             &stmeve_struct,
@@ -71,6 +73,6 @@ int main()
             0
         );
     }
-
+    deinit_state_mgmt();
     return 0;
 }

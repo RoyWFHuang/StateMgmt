@@ -19,7 +19,6 @@ STM_LIB_FILE = $(STM_FILE)
 INCLUDE_DIR = \
 -I$(SRC_ROOT) \
 -I$(SRC_ROOT)/inc \
--I$(SRC_ROOT)/$(RECOVERYMGMT_MODULE)/inc \
 -I. \
 -I./inc \
 -I./h
